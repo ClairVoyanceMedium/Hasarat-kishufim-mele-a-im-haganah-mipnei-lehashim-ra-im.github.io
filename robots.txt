@@ -1,42 +1,148 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# Robots.txt מותאם לשנת 2025 – רמת מקצועיות עולמית ל-SEO בישראל
+# מיועד לשוק הישראלי, AI, עוזרים קוליים, בוטים חברתיים וקידום אתרים מתקדם
+# אתר: https://clairvoyancemedium.github.io/Hasarat-kishufim-mele-a-im-haganah-mipnei-lehashim-ra-im.github.io/
+# עדכון אחרון: 19/04/2025 14:00 GMT
+# קובץ זה מנוסח ב-UTF-8; יש לוודא תמיכה מלאה בקידוד זה על השרת
+# נבדק עם Google Search Console ו-robotstxt.org לאימות תקינות
+
+##########################
+# דומיין ומפות אתר       #
+##########################
+Host: clairvoyancemedium.github.io
+Sitemap: https://clairvoyancemedium.github.io/Hasarat-kishufim-mele-a-im-haganah-mipnei-lehashim-ra-im.github.io/sitemap.xml
+Sitemap: https://clairvoyancemedium.github.io/Hasarat-kishufim-mele-a-im-haganah-mipnei-lehashim-ra-im.github.io/sitemap-images.xml
+Sitemap: https://clairvoyancemedium.github.io/Hasarat-kishufim-mele-a-im-haganah-mipnei-lehashim-ra-im.github.io/sitemap-video.xml
+
+##########################
+# הגדרות גלובליות       #
+##########################
 User-agent: *
-Disallow: /admin/
-Disallow: /tmp/
+Crawl-delay: 1                  # סריקה אחידה מבלי להעמיס על השרת  
+Disallow: /private/             # תיקיות רגישות  
+Disallow: /temp/                # קבצים זמניים  
+Disallow: /cgi-bin/             # סקריפטים מותקנים ישנים  
+Disallow: /*?*                  # חוסם תוכן כפול מפרמטרים  
+Allow: /*.css$                  # CSS לרינדור מיטבי  
+Allow: /*.js$                   # JS חיוני  
+Allow: /*.pdf$                  # מדריכים ומסמכים אסטרטגיים  
+Clean-param: utm_source&utm_medium&utm_campaign /   # הסרת פרמטרים שיווקיים  
+Clean-param: sessionid           # הסרת מזהי סשן  
+
+##########################
+# משפחת Google           #
+##########################
+User-agent: Googlebot
+Crawl-delay: 1
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cgi-bin/
+Allow: /טקסים/
+Allow: /הגנה/
+Allow: /הסרת-כישופים/
+
+User-agent: Googlebot-Image
+Crawl-delay: 1
+Disallow: /private/
+Disallow: /temp/
+Allow: /תמונות/
+
+User-agent: Googlebot-Video
+Crawl-delay: 1
+Disallow: /private/
+Disallow: /temp/
+Allow: /וידאו-טקסים/
+
+User-agent: Mediapartners-Google
+Crawl-delay: 1
 Disallow: /private/
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
-
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
-
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
-User-agent: Googlebot
-Allow: /
 User-agent: AdsBot-Google
-Allow: /
+Crawl-delay: 1
+Disallow: /private/
+
+##########################
+# עוזרים קוליים         #
+##########################
+User-agent: Googlebot-Voice
+Crawl-delay: 1
+Disallow: /private/
+Disallow: /temp/
+Allow: /שאלות-נפוצות/
+Allow: /טקסים-פשוטים/
+Allow: /עצות/
+
+User-agent: Amazonbot          # Alexa
+Crawl-delay: 1
+Disallow: /private/
+Disallow: /temp/
+Allow: /שאלות-נפוצות/
+Allow: /עצות/
+
+User-agent: Applebot           # Siri
+Crawl-delay: 1
+Disallow: /private/
+Disallow: /temp/
+Allow: /שאלות-נפוצות/
+Allow: /עצות/
+
+##########################
+# בוטים חברתיים         #
+##########################
+User-agent: Twitterbot
+Crawl-delay: 1
+Disallow: /private/
+Disallow: /temp/
+Allow: /טקסים/
+Allow: /תמונות/
+Allow: /וידאו-טקסים/
+
+User-agent: FacebookBot
+Crawl-delay: 1
+Disallow: /private/
+Disallow: /temp/
+Allow: /טקסים/
+Allow: /תמונות/
+Allow: /וידאו-טקסים/
+
+##########################
+# Bing & שוק דוברי עברית #
+##########################
 User-agent: Bingbot
-Allow: /
+Crawl-delay: 1
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cgi-bin/
+Allow: /טקסים/
+Allow: /הגנה/
+Allow: /הסרת-כישופים/
 
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
-Disallow: /
-User-agent: EvilScraper
+##########################
+# סורקי AI מתפתחים       #
+##########################
+User-agent: xAI-Crawler
+Crawl-delay: 1
+Disallow: /private/
+
+User-agent: OpenAI-Crawler
+Crawl-delay: 1
+Disallow: /private/
+
+User-agent: AnthropicBot
+Crawl-delay: 1
+Disallow: /private/
+
+User-agent: Qwantify         # שוק דוברי עברית
+Crawl-delay: 1
+Disallow: /private/
+
+##########################
+# חסימת רובוטים לא רצויים#
+##########################
+User-agent: AhrefsBot
 Disallow: /
 
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
